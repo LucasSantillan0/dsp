@@ -8,7 +8,7 @@ export default function SelectImages({ images }) {
 
   console.log(images);
   return (
-    <div className="w-8/12">
+    <div className="w-11/12 mx-auto md:w-8/12">
       <div className="w-12/12 flex justify-center mb-12 mt-6">
         <RoundedImage src={principalImage} width={500} height={500} />
       </div>
@@ -17,7 +17,7 @@ export default function SelectImages({ images }) {
           <li key={image}>
             <button
             onClick={e=>setPrincipalImage(image)}
-            className={`hover:scale-110 ease-out duration-300`}
+            className={`hover:scale-105 ease-out duration-300 ${image===principalImage && 'opacity-60 scale-110'}`}
             >
             <RoundedImage
               src={image}
