@@ -13,7 +13,7 @@ export default function ProductPage({ title, images, price, details }) {
           {title}
         </h1>
         <div className="flex gap-8 mt-2 mb-4 justify-center">
-          <RoundedButton text={"Buy it!"} className="text-xl font-serif-" />
+          <RoundedButton text={"Buy it!"} className="text-xl font-serif-" onClick={e=>console.log('buy')}/>
           <Price price={price} />
         </div>
         <Description
