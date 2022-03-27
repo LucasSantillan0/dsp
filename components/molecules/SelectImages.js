@@ -8,11 +8,11 @@ export default function SelectImages({ images }) {
 
   console.log(images);
   return (
-    <div className="ml-16">
+    <div className="w-8/12">
       <div className="w-12/12 flex justify-center mb-12 mt-6">
-        <RoundedImage src={principalImage} width={410} height={410} />
+        <RoundedImage src={principalImage} width={500} height={500} />
       </div>
-      <ul className="flex gap-4">
+      <ul className="flex gap-4 justify-center">
         {images.map((image) => (
           <li key={image}>
             <button
