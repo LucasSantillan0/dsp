@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export default function SelectImages({ images }) {
   //TODO: Make imports dinamic
-  const [principalImage, setPrincipalImage] = useState(images[1]);
+  const [principalImage, setPrincipalImage] = useState(images[0]);
 
   console.log(images);
   return (

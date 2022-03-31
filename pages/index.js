@@ -6,14 +6,30 @@ import image1 from '../producto0/1.webp'
 import image2 from '../producto0/2.webp'
 import Price from "../components/atoms/Price";
 import ProductPage from "../components/templates/ProductPage";
+import { useEffect, useState } from "react";
+
+const apiUrl='http://localhost:3000/api'
 
 export default function Home() {
-  const images = [image0, image1, image2]
+  // TODO: get products with redux
+  const [product, setProduct] = useState(null)
+  useEffect(()=>{
+    fetch('api/products')
+    .then(response => response.json())
+    .then(product => {
+      setProduct(product[0])})
+
+  }, [])
   return (
+    <>
+    {product && 
+    
     <ProductPage
-    images={images}
-    title={'Lenovo wireless headset'}
-    price={150}
+    images={product.images}
+    title={product.title}
+    price={product.price}
     />
+    }
+    </>
   );
 }
