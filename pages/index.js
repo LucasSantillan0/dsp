@@ -1,6 +1,6 @@
 import ProductPage from "../components/templates/ProductPage";
 import { useEffect, useState } from "react";
-import LoadingSpinner from "../components/atoms/loadingSpinner";
+import LoadingSpinner from "../components/atoms/LoadingSpinner";
 
 const apiUrl = "http://localhost:3000/api";
 
